@@ -1,0 +1,26 @@
+{
+    "name": "",
+    "version": "0.1.0",
+    "description": "",
+    "main": "main.js",
+    "scripts": {
+        "electron": "electron main.js",
+        "scss": "node-sass --output-style compressed -o src/css src/scss",
+        "autoprefixer": "postcss -u autoprefixer -b 'chrome' -r src/css/main.css",
+        "build:css": "npm run scss && npm run autoprefixer",
+        "watch:css": "nodemon -e scss -x \"npm run build:css\"",
+        "start": "parallelshell \"npm run electron\" \"npm run watch:css\""
+    },
+    "devDependencies": {
+        "electron-reload": "^1.0.2",
+        "node-sass": "^3.8.0",
+        "postcss-cli": "^2.6.0",
+        "autoprefixer": "^6.4.0",
+        "nodemon": "^1.10.2",
+        "parallelshell": "^2.0.0"
+    },
+    "dependencies": {
+        "electron-prebuilt": "^1.3.4",
+        "jQuery": "^1.7.4"
+    }
+}
