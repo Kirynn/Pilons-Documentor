@@ -1,4 +1,4 @@
 # Pilons-Documentor
 
 `npm install`<br />
-`npm run build`
+`npm run start`
