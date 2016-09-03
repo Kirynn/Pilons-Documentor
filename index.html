@@ -2,9 +2,21 @@
 <html lang='en'>
     <head>
         <title></title>
-        <link rel="stylesheet" type="text/css" href="src/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="dist/css/main.css" />
     </head>
     <body>
+        <titlebar></titlebar>
         
+        <!-- Load scripts at the end for faster page load -->
+        <script src="vendor/js/riot+compiler.min.js"></script>
+        <!-- Compile and mount riot tags -->
+        <script src="src/js/tags/titlebar.tag" type="riot/tag"></script>
+        <script>
+            riot.compile(function() {
+                
+                //Mount tags below
+                riot.mount('*');
+            });
+        </script>
     </body>
 </html>
