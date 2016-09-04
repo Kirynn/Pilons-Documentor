@@ -1,4 +1,5 @@
 @import 'parts/titlebar';
+@import 'parts/landing';
 
 * {
     
@@ -6,18 +7,42 @@
     margin: 0px;
 }
 
+*, *::after, *::before {
+    
+    box-sizing: border-box;
+}
+
 html {
     
     height: 100%;
     font-size: 16px;
+    cursor: default;
 }
 
 body {
     
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    
+    landing {
+        
+        flex: 1;
+    }
 }
 
 .no-drag {
     
     -webkit-app-region: no-drag;
+}
+
+::-webkit-scrollbar {
+    
+    //display: none;
+}
+
+.btn {
+    
+    -webkit-user-select: none;
 }

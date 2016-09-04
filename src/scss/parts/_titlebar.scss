@@ -3,16 +3,17 @@ titlebar {
     width: 100%;
     -webkit-app-region: drag;
     -webkit-user-select: none;
-    background-color: red;
+    background-color: #747474;
     height: 2em;
     display: block;
+    position: fixed;
     z-index: 10000;
     
     .window-buttons {
         
         float: right;
         display: block;
-        width: 10%;
+        width: 7%;
         height: 65%;
         
         ul {
@@ -28,11 +29,12 @@ titlebar {
                 flex: 1;
                 text-align: center;
                 padding-bottom: 1.5rem;
+                -webkit-app-region: no-drag;
             }
             
             li:hover {
                 
-                background-color: blue;
+                background-color: #3c3c3c;
             }
         }
     }
