@@ -1,19 +1,25 @@
-const {app, BrowserWindow} = require('electron');
+const {app, BrowserWindow, ipcMain} = require('electron');
 
 require('electron-reload')(__dirname);
 
-let win;
+let win
 
 function createWindow () {
     
-    win = new BrowserWindow({width: 800, height: 600});
+    win = new BrowserWindow({width: 1366, height: 768, show: false, frame: false, titleBarStyle: 'hidden'});
     win.loadURL(`file://${__dirname}/index.html`);
+    win.once('ready-to-show', () => {
+        win.show();    
+    });
     win.on('closed', () => {
         win = null;
     });
 }
 
-app.on('ready', createWindow);
+app.on('ready', () => {
+
+    createWindow();
+});
 
 app.on('all-windows-closed', () => {
     
