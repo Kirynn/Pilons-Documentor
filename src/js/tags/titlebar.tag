@@ -7,14 +7,3 @@
         </ul>
     </div>
 </titlebar>
-
-<script>
-    
-    const {ipcRenderer} = require('electron')
-    const {$} = require('jquery');
-    
-    $('#close-btn').on('click', function (e) {
-        
-        ipcRenderer.send('asynchronous-message', 'close');        
-    });
-</script>
