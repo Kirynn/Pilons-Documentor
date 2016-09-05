@@ -1,4 +1,4 @@
-<landing>
+<landing class='landing'>
     <div class="wrapper">
         <article class="recent-docs">
             <header>Recent Documents</header>
